@@ -1,0 +1,25 @@
+﻿<div class="container">
+    <div class="product-title">
+        <h1 class="text-center">Production Details for {{controller.production.title}}</h1>
+    </div>
+    <div class="row prod-deets">
+        <div class="col-lg-4">
+            <img class="img-responsive img-rounded" src="{{controller.production.featImg}}">
+        </div>
+        <div class="col-lg-8">
+            <h3>Genre:</h3>
+            <p>{{controller.production.genre}}</p>
+            <h3>Production Description:</h3>
+            <p>{{controller.production.description}}</p>
+            <h3>Date Posted:</h3>
+            <p>{{controller.production.startDate | date:"MM/dd/yyyy"}}</p>
+            <h3>Date Ending:</h3>
+            <p>{{controller.production.endDate | date:"MM/dd/yyyy"}}</p>
+            <h3>Amount Requesting:</h3>
+            <p>{{controller.production.reqAmount | currency}}</p>
+
+
+        </div>
+        <a ng-click="controller.goBack()" class="btn btn-default">Back</a>
+    </div>
+</div>

@@ -1,0 +1,54 @@
+﻿<div class="container">
+    <div class="row profile">
+        <div class="col-md-3">
+            <div class="profile-sidebar">
+                <h2 class="text-center" style="color:#FDD000">Welcome!</h2>
+                <!-- SIDEBAR USER TITLE -->
+                <div class="profile-usertitle">
+                    <div class="profile-usertitle-name" style="color:#F16316">
+                        {{controller.profile.fullName}} 
+                    </div>
+                    
+                </div>
+                <!-- END SIDEBAR USER TITLE -->
+                <!-- SIDEBAR BUTTONS -->
+                <!-- END SIDEBAR BUTTONS -->
+                <!-- SIDEBAR MENU -->
+                <div class="profile-usermenu">
+                    <ul class="nav">
+                        <li>
+                            <a ui-sref="dashboard.userDashboard.userOverview.myProductionOverview">
+                                <i class="fa fa-home fa-2x"></i>
+                                Overview
+                            </a>
+                        </li>
+                        <li>
+                            <a ui-sref="dashboard.userDashboard.myProfile">
+                                <i class="fa fa-user fa-2x"></i>
+                                Profile Settings
+                            </a>
+                        </li>
+                        <li>
+                            <a ui-sref="dashboard.userDashboard.myProductions">
+                                <i class="fa fa-film fa-2x"></i>
+                                My Productions
+                            </a>
+                        </li>
+                        <li>
+                            <a ui-sref="dashboard.userDashboard.help">
+                                <i class="fa fa-question fa-2x"></i>
+                                Help
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- END MENU -->
+            </div>
+        </div>
+        <div class="col-md-9">
+            <div class="profile-content" ui-view>
+
+            </div>
+        </div>
+    </div>
+</div>

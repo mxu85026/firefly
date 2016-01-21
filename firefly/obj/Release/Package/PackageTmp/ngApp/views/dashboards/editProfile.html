@@ -1,0 +1,39 @@
+﻿<div class="container">
+    <div class="col-lg-9">
+        <h1>My Profile</h1>
+
+        <form novalidate class="form-horizontal" name="editProfileForm" ng-submit="controller.editProfile()">
+            <div class="form-group">
+                <label class="control-label col-xs-2"><strong>Username:</strong></label>
+                <div class="col-xs-10">
+                    <input name="userName" class="form-control" type="email" ng-model="controller.profile.userName" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-xs-2"><strong>Full Name:</strong></label>
+                <div class="col-xs-10">
+                    <input name="fullName" class="form-control" ng-model="controller.profile.fullName" ng-minlength="5" ng-required="true" />
+                    <span ng-show="editProfileForm.fullName.$touched && editProfileForm.fullName.$error.required" class="error">
+                        Please enter your full name
+                    </span>
+                    <span ng-show="editProfileForm.fullName.$touched && editProfileForm.fullName.$error.minlength" class="error">
+                        Must be atleast 5 characters long
+                    </span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-xs-2"><strong>Short bio:</strong></label>
+                <div class="col-xs-10">
+                    <textarea name="shortBio" class="form-control" ng-model="controller.profile.shortBio"></textarea>
+                </div>
+            </div>
+            <div class="pull-right">
+                <a ng-click="controller.goBack()" class="btn btn-default">Back</a>
+                <input class="btn btn-default" type="submit" value="Edit Profile" ng-disabled="editProfileForm.$invalid" />
+                <!-- add disable button -->
+                <br />
+            </div>
+        </form>
+    </div>
+
+</div>

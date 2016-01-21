@@ -1,0 +1,10 @@
+﻿<div class="hero-space">
+    <h1>Post, Plan, Produce</h1>
+    <h5>Quickly get funding for your upcoming project</h5>
+    <a ui-sref="login" class="btn btn-outline btn-lg" ng-show="!account.isLoggedIn()">Start Here!</a>
+    <a ui-sref="dashboard.userDashboard.myProductions" class="btn btn-outline btn-lg" ng-show="account.isLoggedIn()">Start Creating Now!</a>
+</div>
+
+<div ui-view>
+
+</div>

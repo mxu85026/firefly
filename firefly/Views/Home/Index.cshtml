@@ -1,0 +1,76 @@
+﻿<html xmlns="http://www.w3.org/1999/xhtml" ng-app="MyApp">
+<head>
+    <title>FireFly</title>
+    <base href="/" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/Site.css" rel="stylesheet" />
+    <link href="~/Content/font-awesome.min.css" rel="stylesheet" />
+
+
+</head>
+
+<body ng-controller="AccountController as account">
+    <div class="top-nav">
+        <a class="main-logo" href="/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Firefly_Logo.svg/320px-Firefly_Logo.svg.png" height="50"/></a>
+        <div class="pull-right tool-bar">
+            <a href="/">Home</a>
+            <a ui-sref="about">About</a>
+            <a ng-show="account.isLoggedIn()" ui-sref="dashboard">Dashboard</a> 
+            <a ui-sref="login" ng-show="!account.isLoggedIn()">Login</a>
+            <a href="/" ng-click="account.logout()" ng-show="account.isLoggedIn()">Logout</a>
+        </div>
+    </div>
+    <hr />
+
+
+
+
+
+
+    <div ui-view></div>
+
+
+
+    <script src="~/Scripts/jquery-2.1.4.min.js"></script>
+    @*<script src="~/Scripts/bootstrap.min.js"></script>*@
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+    <script src="~/Scripts/respond.min.js"></script>
+
+    <script src="~/Scripts/angular.min.js"></script>
+    <script src="~/Scripts/angular-ui/ui-bootstrap.min.js"></script>
+    <script src="~/Scripts/angular-ui/ui-bootstrap-tpls.min.js"></script>
+    <script src="~/Scripts/angular-ui-router.min.js"></script>
+    <script src="~/Scripts/angular-route.min.js"></script>
+    <script src="~/Scripts/angular-resource.min.js"></script>
+    <script type="text/javascript" src="//api.filestackapi.com/filestack.js"></script>
+    <script src="~/Scripts/angular_filepicker.min.js"></script>
+
+    <script src="~/ngApp/app.js"></script>
+    <script src="~/ngApp/controllers/controllers.js"></script>
+    <script src="~/ngApp/services/commentsService.js"></script>
+    <script src="~/ngApp/services/services.js"></script>
+    <script src="~/ngApp/services/usersService.js"></script>
+    <script src="~/ngApp/controllers/accountController.js"></script>
+    <script src="~/ngApp/services/accountService.js"></script>
+    <script src="~/ngApp/services/donationsService.js"></script>
+
+    <script src="~/ngApp/controllers/productions/listProductionController.js"></script>
+    <script src="~/ngApp/controllers/productions/detailsProductionController.js"></script>
+
+    <script src="~/ngApp/controllers/productions/addProductionController.js"></script>
+    <script src="~/ngApp/controllers/productions/editProductionController.js"></script>
+    <script src="~/ngApp/controllers/productions/deleteProductionController.js"></script>
+    <script src="~/ngApp/controllers/dashboard/listMyProductionController.js"></script>
+    <script src="~/ngApp/controllers/productions/editCommentController.js"></script>
+    <script src="~/ngApp/controllers/dashboard/dashboardController.js"></script>
+    <script src="~/ngApp/controllers/dashboard/userDashboardController.js"></script>
+    <script src="~/ngApp/controllers/dashboard/userListController.js"></script>
+    <script src="~/ngApp/controllers/dashboard/adminDashboardController.js"></script>
+    <script src="~/ngApp/services/productionService.js"></script>
+    <script src="~/ngApp/services/myProductionService.js"></script>
+
+    <script src="~/ngApp/controllers/dashboard/ViewProfileController.js"></script>
+    <script src="~/ngApp/services/profileServices.js"></script>
+
+</body>
+</html>

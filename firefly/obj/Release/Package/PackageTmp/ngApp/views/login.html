@@ -1,0 +1,40 @@
+﻿<div class="container">
+    <div class="row">
+        <!--<fieldset>
+            <legend>Login with a Social Provider</legend>
+
+            <ul>
+                <li ng-repeat="externalLogin in account.externalLogins">
+                    <a target="_self" href="{{externalLogin.url}}">{{externalLogin.name}}</a>
+                </li>
+            </ul>
+
+        </fieldset>-->
+        <div class="col-lg-6 col-lg-offset-3 login-form">
+            <fieldset>
+                <h1>Login</h1>
+                <ul>
+                    <li ng-repeat="error in controller.validationMessages">
+                        {{error}}
+                    </li>
+                </ul>
+
+                <form ng-submit="controller.login()" name="login-form" novalidate>
+                    <div>
+                        <label>Email:</label>
+                        <input ng-model="controller.loginUser.userName" id="login" name="login" type="email" placeholder="Email Address" ng-required="true" required autofocus />
+                        <span ng-show="login-form.login.$touched && login-form.login.$error.required" class="error">
+                            Username is required.
+                        </span>
+                    </div>
+                    <div>
+                        <label>Password:</label>
+                        <input ng-model="controller.loginUser.password" id="password" name="password" type="password" placeholder="Password" ng-required="true" required />
+                    </div>
+                    <input type="submit" value="Login" />
+                    <a href="/register">or click here to Register...</a>
+                </form>
+            </fieldset>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,78 @@
+﻿<div class="container">
+    <h1>Edit Production</h1>
+
+    <div>
+        <label>Choose Featured Image:</label>
+        <button ng-click="controller.pickFile()">Change Image</button>
+        <p>(Will be main image used, and background of trek details page)</p>
+        <img ng-src="{{ controller.file.url | fpConvert: {w: 100} }}" alt="{{controller.file.filename}}" />
+        <input type="hidden" ng-model="controller.file.url" />
+    </div>
+
+    <form novalidate name="editProductionForm" ng-submit="controller.editProduction()">
+        <div>
+            <label>Title:</label>
+            <input name="prodTitle" ng-model="controller.prodToEdit.title" ng-required="true" />
+            <span ng-show="editProductionForm.prodTitle.$touched && editProductionForm.prodTitle.$error.required" class="error">
+                Please name your production
+            </span>
+        </div>
+        <div>
+            <label>Genre:</label>
+            <select type="text" name="prodGenre" ng-model="controller.prodToEdit.genre" ng-required="true">
+                <option value="Movie">Movie</option>
+                <option value="TV Series">TV Series</option>
+                <option value="Short Film">Short Film</option>
+            </select>
+            <span ng-show="editProductionForm.prodGenre.$touched && editProductionForm.prodGenre.$error.required" class="error">
+                Please pick a genre for your production
+            </span>
+        </div>
+        <div>
+            <label>Description:</label>
+            <input name="prodDesc" ng-model="controller.prodToEdit.description" ng-required="true" />
+            <span ng-show="editProductionForm.prodDesc.$touched && editProductionForm.prodDesc.$error.required" class="error">
+                Please type a short description of your production
+            </span>
+        </div>
+        <div>
+            <label>Start Date:</label>
+            <input type="datetime" name="prodStartDate" ng-model="controller.prodToEdit.startDate" placeholder="{{controller.prodToEdit.startDate}}" ng-required="true" />
+            Currently {{controller.prodToEdit.startDate | date:"MM/dd/yyyy" }}
+            <span ng-show="editProductionForm.prodStartDate.$touched && editProductionForm.prodStartDate.$error.required" class="error">
+                Please select a start date for your production listing
+            </span>
+        </div>
+        <div>
+            <label>End Date:</label>
+            <input type="datetime" name="prodEndDate" ng-model="controller.prodToEdit.endDate" placeholder="{{controller.prodToEdit.endDate}}" ng-required="true" />
+            Currently {{controller.prodToEdit.endDate | date:"MM/dd/yyyy" }}
+            <span ng-show="editProductionForm.prodEndDate.$touched && editProductionForm.prodEndDate.$error.required" class="error">
+                Please select an end date for your production listing
+            </span>
+        </div>
+        <div>
+            <label>Requested Amount ($USD):</label>
+            <input type="number" name="prodReqAmount" ng-model="controller.prodToEdit.reqAmount" ng-required="true" />
+            <span ng-show="editProductionForm.prodReqAmount.$touched && editProductionForm.prodReqAmount.$error.required" class="error">
+                Please enter a requested amount of funds for your production listing
+            </span>
+        </div>
+        <div  ng-show="account.getClaim('Admin')">
+            <label>Production Status (Admin only view):</label>
+            <select type="text" name="prodStatus" ng-model="controller.prodToEdit.status">
+                <option value="Pending">Pending</option>
+                <option value="Approved">Approved</option>
+                <option value="Complete">Complete</option>
+                <option value="Denied">Denied</option>
+            </select>
+        </div>
+        <a ng-click="controller.goBack()" class="btn btn-default">Back</a>
+        <input class="btn btn-default" type="submit" value="Save Production" ng-disabled="editProductionForm.$invalid" />
+        
+        
+
+    </form>
+
+    
+</div>

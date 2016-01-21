@@ -1,0 +1,24 @@
+﻿<div class="container">
+    <div class="row">
+        <div class="col-lg-6 col-lg-offset-3 reg-form">
+            <fieldset>
+                <h1>Complete Registration</h1>
+
+                <ul>
+                    <li ng-repeat="message in controller.validationMessages">
+                        {{message}}
+                    </li>
+                </ul>
+
+                <form ng-submit="controller.register()">
+                    <div>
+                        <label>Email:</label>
+                        <input ng-model="controller.registerUser.email" />
+                    </div>
+                    <input type="submit" value="Register" />
+                </form>
+
+            </fieldset>
+        </div>
+    </div>
+</div>

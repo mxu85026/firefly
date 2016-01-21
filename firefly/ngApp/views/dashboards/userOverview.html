@@ -1,0 +1,35 @@
+﻿<div class="container">
+    <h1>My Profile</h1>
+   <form class="form-horizontal">
+
+        <div class="form-group">
+            <label class="col-lg-2 control-label"><strong>Username:</strong></label>
+            <div class="col-lg-10 detail-data">
+                {{controller.profile.userName}}
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-lg-2 control-label"><strong>Full Name:</strong></label>
+            <div class="col-lg-10 detail-data">
+                {{controller.profile.fullName}}
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-lg-2 control-label"><strong>Short Bio:</strong></label>
+            <div class="col-lg-10 detail-data">
+                {{controller.profile.shortBio}}
+            </div>
+        </div>
+    </form>
+
+
+    <hr class="col-lg-10" />
+    
+    <div class="col-lg-10">
+        <h1>My Productions</h1>
+        <div ui-view>
+
+        </div>
+    </div>
+
+</div>

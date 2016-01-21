@@ -1,0 +1,63 @@
+﻿<div class="container">
+    <h1>Add New Production</h1>
+
+    <div>
+        <label>Choose Featured Image:</label>
+        <button class="btn btn-default" ng-click="controller.pickFile()">Add Image</button>
+        <p>(Will be main image used, and background of trek details page)</p>
+        <img ng-src="{{ controller.file.url }}" alt="{{controller.file.filename}}" />
+        <input type="hidden" ng-model="controller.file.url" />
+    </div>
+
+    <form novalidate name="addProductionForm" ng-submit="controller.save()">
+        <div>
+            <label>Title:</label>
+            <input name="prodTitle" ng-model="controller.newProduction.title" ng-required="true" />
+            <span ng-show="addProductionForm.prodTitle.$touched && addProductionForm.prodTitle.$error.required" class="error">
+                Please name your production
+            </span>
+        </div>
+        <div>
+            <label>Genre:</label>
+            <select type="text" name="prodGenre" ng-model="controller.newProduction.genre" ng-required="true">
+                <option value="Movie">Movie</option>
+                <option value="TV Series">TV Series</option>
+                <option value="Short Film">Short Film</option>
+            </select>
+            <span ng-show="editProductionForm.prodGenre.$touched && editProductionForm.prodGenre.$error.required" class="error">
+                Please pick a genre for your production
+            </span>
+        </div>
+        <div>
+            <label>Description:</label>
+            <input name="prodDesc" ng-model="controller.newProduction.description" ng-required="true" />
+            <span ng-show="addProductionForm.prodDesc.$touched && addProductionForm.prodDesc.$error.required" class="error">
+                Please type a short description of your production
+            </span>
+        </div>
+        <div>
+            <label>Start Date:</label>
+            <input type="datetime" name="prodStartDate" ng-model="controller.newProduction.startDate" ng-required="true" />
+            <span ng-show="addProductionForm.prodStartDate.$touched && addProductionForm.prodStartDate.$error.required" class="error">
+                Please select a start date for your production listing
+            </span>
+        </div>
+        <div>
+            <label>End Date:</label>
+            <input type="datetime" name="prodEndDate" ng-model="controller.newProduction.endDate" ng-required="true" />
+            <span ng-show="addProductionForm.prodEndDate.$touched && addProductionForm.prodEndDate.$error.required" class="error">
+                Please select an end date for your production listing
+            </span>
+        </div>
+        <div>
+            <label>Requested Amount ($USD):</label>
+            <input type="number" name="prodReqAmount" ng-model="controller.newProduction.reqAmount" ng-required="true" />
+            <span ng-show="addProductionForm.prodReqAmount.$touched && addProductionForm.prodReqAmount.$error.required" class="error">
+                Please enter a requested amount of funds for your production listing
+            </span>
+        </div>
+        <a ng-click="controller.goBack()" class="btn btn-default">Back</a>
+        <input class="btn btn-default" type="submit" value="Create New Production" ng-disabled="addProductionForm.$invalid" />
+    </form>
+
+</div>

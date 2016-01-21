@@ -1,0 +1,28 @@
+﻿<div class="row">
+    <div class="col-sm-4 prod-spacing" ng-repeat="prod in controller.usersProductions| limitTo:-2 | orderBy:'time':true">
+        <div class="prod-item">
+            <div class="prod-info">
+                <a ui-sref="dashboard.userDashboard.detailsProduction({id:prod.id})">
+                    <h3>
+                        {{prod.title}}
+                    </h3>
+                </a>
+                <p>{{prod.description | limitTo:100}}...</p>
+                <div ng-show="account.isLoggedIn()">
+                    <a ui-sref="dashboard.userDashboard.editProduction({id: prod.id})">Edit</a> | <a ng-click="controller.removeProductionModal(prod.id)">Delete</a>
+                </div>
+            </div>
+            <div class="prod-progress">
+                <div class="progress">
+                    <div class="progress-bar col-lg-12" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                        60%
+                    </div>
+                </div>
+                <div class="prod-stats">
+                    <!-- add the calculations here -->
+                    60% funded / $50,000 pledged / 4 days to go
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

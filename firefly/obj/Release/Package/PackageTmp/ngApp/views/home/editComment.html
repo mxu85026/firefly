@@ -1,0 +1,11 @@
+﻿<div class="container">
+    <h1>Edit Your Comment...</h1>
+    <div class="col-lg-6 col-lg-offset-3">
+        <form ng-submit="controller.editComment()">
+            <input class="form-control" type="text" placeholder="Title of comment..." ng-model="controller.commToEdit.title" />
+            <textarea class="form-control" placeholder="Write a comment..." rows="3" ng-model="controller.commToEdit.comment"></textarea>
+            <br>
+            <input type="submit" class="btn btn-info pull-right" value="Post">
+        </form>
+    </div>
+</div>

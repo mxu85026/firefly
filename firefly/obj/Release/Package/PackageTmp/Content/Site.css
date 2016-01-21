@@ -1,0 +1,483 @@
+﻿body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #0F2105;
+    font-size: 12px;
+    line-height: 2.0;
+}
+.row {
+    margin-right: -20px;
+    margin-left: -20px;
+}
+.sub-title{
+    font-size:20px
+}
+
+.col, .col-right, .col-center, .mobile-col, .px-gutter {
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/* Headers and navigation */
+
+.h1 {
+    font-size: 20px;
+    line-height: 1.8;
+}
+
+.top-nav {
+    /*margin: 25px 10%;*/
+    padding: 0;
+}
+
+    .top-nav a {
+        padding-left: 25px;
+    }
+
+.list-header {
+    margin: 35px 0;
+}
+
+hr {
+    margin-bottom: 0;
+}
+.text-success {
+    font-size: 16px;
+}
+
+.main-logo {
+    color: #80256d;
+    font-weight: 800;
+    font-size: 20px;
+    padding-top: 18px;
+}
+    .main-logo img {
+        margin-top: 18px;
+    }
+
+.tool-bar {
+    padding: 30px 40px 0 0;
+    margin: 0;
+    font-size: 14px;
+    font-weight: 100;
+}
+
+    .tool-bar a {
+        color: grey;
+    }
+
+.hero-space {
+    margin: 0;
+    height: 60%;
+    padding: 7% 0;
+    text-align: center;
+    background: url(http://redripley.com/wp-content/uploads/2015/10/film-production.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+    .hero-space h1 {
+        color: white;
+        font-size: 6em;
+        text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.75);
+        
+    }
+
+    .hero-space h5 {
+        color: white;
+        font-size: 28px;
+        font-weight: 100;
+        text-shadow: 0px 0px 5px rgb(0, 0, 0);
+        letter-spacing: 3px;
+        margin-bottom: 5%;
+    }
+
+h1{
+    font-size: 25px;
+    color: #F16316;
+}
+
+h3 {
+    font-size: 17px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 600;
+    line-height: 25.4px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 100%;
+}
+
+/* Form Validation */
+
+.ng-invalid.ng-touched {
+    background-color: #FA787E;
+}
+
+.error {
+    color: red;
+}
+
+.btn-outline{
+    
+    background-color: transparent;
+    color: white;
+    transition: all .5s;
+    border: 1px solid white ;
+
+}
+.btn-outline:hover{
+    
+    background-color: white;
+    color: darkorange;
+}
+
+
+fieldset {
+    font-size: 10px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 100;
+    line-height: 12px;
+}
+
+legend {
+    font-size: 14px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 100;
+    line-height: 12px;
+}
+
+label {
+    font-size: 14px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 100;
+    line-height: 12px;
+}
+
+form ng-submit {
+    float: right;
+    margin-left: 10px;
+}
+
+.nav > li > a:hover, .nav > li > a:focus {
+    background-color: transparent;
+}
+
+p {
+    font-size: 14px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 100;
+    line-height: 20px;
+}
+
+.text-inline h1, .text-inline span {
+    display: inline;
+    vertical-align: top;
+    line-height: 28px;
+}
+
+h4 {
+    font-size: 18px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 600;
+}
+
+h5 {
+    font-size: 14px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 500;
+}
+/* Product list section*/
+.prod-item {
+    border: 1px solid rgba(186, 186, 186, 0.6);
+    padding: 0 15px;
+    border-radius: 0px 0px 8px 8px;
+    height: 250px;
+    position: relative;
+}
+
+.prod-item h3{
+    padding-bottom: 0;
+    display: inline-block;
+}
+.prod-top {
+    height: 250px;
+    border-radius: 8px 8px 0 0;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+container {
+    display: inline-block;
+    width: 100%;
+    padding-left: 20px;
+    padding-bottom: 60px;
+}
+
+.prod-progress {
+    vertical-align: bottom;
+    bottom: 0;
+    width: 90%;
+    position: absolute;
+}
+
+.product-title {
+    margin: 50px 0;
+}
+
+.prod-deets {
+    margin-bottom: 50px;
+}
+
+.admin-options {
+    font-size: 15px;
+    color: grey;
+    padding: 0 0 10px 0;
+}
+
+span {
+    font-size: 16px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 100;
+}
+
+.prod-info {
+    width: 90%;
+}
+
+.progress {
+    margin-bottom: 5px;
+}
+
+.prod-stats {
+    margin-bottom: 10px;
+    font-size: 10px;
+}
+
+.prod-spacing {
+    margin-bottom: 25px;
+}
+
+.progress-bar{
+    background-color: #F0970F;
+    
+}
+
+.profile {
+    margin: 20px 0;
+}
+
+/* Profile sidebar */
+.profile-sidebar {
+    padding: 20px 0 10px 0;
+    background-color: #FBFBFB;
+}
+
+.profile-userpic img {
+    float: none;
+    margin: 0 auto;
+    width: 50%;
+    -webkit-border-radius: 50% !important;
+    -moz-border-radius: 50% !important;
+    border-radius: 50% !important;
+}
+
+.profile-usertitle {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.profile-usertitle-name {
+    color: #5a7391;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 7px;
+}
+
+.profile-usertitle-job {
+    text-transform: uppercase;
+    color: #5b9bd1;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.profile-userbuttons {
+    text-align: center;
+    margin-top: 20px;
+}
+
+    .profile-userbuttons .btn {
+        text-transform: uppercase;
+        font-size: 11px;
+        font-weight: 600;
+        padding: 6px 15px;
+        margin-right: 5px;
+    }
+
+        .profile-userbuttons .btn:last-child {
+            margin-right: 0px;
+        }
+
+.profile-usermenu {
+    margin-top: 30px;
+}
+
+    .profile-usermenu ul li {
+        border-bottom: 1px solid #f0f4f7;
+    }
+
+        .profile-usermenu ul li:last-child {
+            border-bottom: none;
+        }
+
+        .profile-usermenu ul li a {
+            color: #93a3b5;
+            font-size: 18px;
+            font-weight: 400;
+        }
+
+            .profile-usermenu ul li a span {
+                margin-left: 20px;
+                padding-bottom: 20px;
+            }
+
+            .profile-usermenu ul li a i {
+                margin-right: 8px;
+            }
+
+            .profile-usermenu ul li a:hover {
+                color: darkgray;
+                background-color: #FFDB99;
+            }
+
+        .profile-usermenu ul li.active {
+            border-bottom: none;
+        }
+
+        .profile-usermenu ul li a:focus {
+            color: white;
+            background-color: darkorange;
+        }
+
+/* Profile Content */
+.profile-content {
+    padding: 20px;
+    background: white;
+    min-height: 460px;
+}
+
+.nav > li > a {
+    position: relative;
+    display: block;
+    padding: 20px 15px;
+}
+
+
+.btn-danger {
+    color: #fff;
+    background-color: #d9534f;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color: #fff;
+}
+
+.detail-data {
+    top: 2px;
+}
+
+.add-button {
+    right: 20px;
+}
+
+.img-thumbnail {
+    width: 150px;
+}
+
+td {
+    text-align: center;
+}
+
+.table tfoot td, .table tfoot th, .table thead td, .table thead th {
+    text-align: center;
+}
+
+.img-circle {
+    width: 150px;
+    height: 150px;
+}
+
+.comment-wrapper .panel-body {
+    max-height: 650px;
+    overflow: auto;
+}
+
+.comment-wrapper .media-list .media img {
+    width: 64px;
+    height: 64px;
+    border: 2px solid #e5e7e8;
+}
+
+.comment-wrapper .media-list .media {
+    border-bottom: 1px dashed #efefef;
+    margin-bottom: 25px;
+}
+
+.comment-wrapper input, .comment-wrapper textarea {
+    width: 100%;
+}
+
+.search input {
+    border: grey;
+}
+
+.login-form, .reg-form {
+    margin-top: 50px;
+    border: 1px solid rgba(186, 186, 186, 0.6);
+    border-radius: 8px;
+    padding: 10px 50px 25px;
+}
+    .login-form h1, .reg-form h1 {
+        margin-bottom: 25px;
+        text-align: center;
+    }
+    .login-form a, .reg-form a {
+        font-size: 16px;
+    }
+
+    .login-form label, .reg-form label {
+        display: inline-block;
+    }
+    .login-form input, .reg-form input {
+        width: 100%;
+        font-size: 2em;
+        padding: 10px;
+        margin: 10px 0;
+    }

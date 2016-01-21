@@ -1,0 +1,47 @@
+﻿<!--<div class="hero-space">
+    <h1>Post, Plan, Produce</h1>
+    <h5>Quickly get funding for your upcoming project</h5>
+    <a ui-sref="login" class="btn btn-default">Start Creating Now!</a>
+</div>-->
+
+<div class="container">
+    <div class="row text-inline list-header">
+        <h1>Browse Productions</h1>
+        <div class="pull-right search">
+            <input ng-model="search" placeholder="Search by title" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4 prod-spacing" ng-repeat="prod in controller.productions | filter: {status: 'Approved'} | filter:search">
+            <a ui-sref="home.detailsProduction({id:prod.id})">
+                <div class="prod-top" style="background-image: url({{prod.featImg}})"></div>
+            </a>
+            <div class="prod-item">
+                <div class="prod-info">
+                    <a ui-sref="home.detailsProduction({id:prod.id})">
+                        <h3>{{prod.title|limitTo:25}}</h3>
+                    </a>
+                    <span class="admin-options" ng-show="account.getClaim('Admin')">
+                        <span>|&nbsp;</span><a ui-sref="home.editProduction({id: prod.id})"><span class="fa fa-pencil"></span></a>
+                        <a ng-click="controller.removeProductionModal(prod.id)">
+                        <span class="fa fa-trash"></span></a>
+                        
+                    </span>
+                    <p>{{prod.description | limitTo:200}}...</p>
+                </div>
+                <div class="prod-progress">
+                    <div class="progress">
+                        <div class="progress-bar col-lg-12" role="progressbar" aria-valuenow="{{controller.progressBar(prod.donationTotal, prod.reqAmount)}}" aria-valuemin="0" aria-valuemax="100" style="width: {{controller.progressBar(prod.donationTotal, prod.reqAmount)}}%;">
+                            {{controller.progressBar(prod.donationTotal, prod.reqAmount)}}% Funded
+                        </div>
+                    </div>
+                    <div class="prod-stats">
+                        {{prod.donationTotal | currency}} / {{prod.reqAmount|currency}} pledged
+                        
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,53 @@
+﻿
+<div class="container">
+    <div class="row profile">
+        <div class="col-md-3">
+            <div class="profile-sidebar">
+                <h4 class="text-center" style="color:#FDD000">Site Management</h4>
+                
+                <!-- SIDEBAR USER TITLE -->
+                <div class="profile-usertitle">
+                    <div class="profile-usertitle-name">
+                        <h5>Administrative Menu</h5>
+                    </div>
+                    <div class="profile-usertitle-job" style="color:#F16316">
+                        Title: Admin
+                    </div>
+                </div>
+                <!-- END SIDEBAR USER TITLE -->
+                <!-- SIDEBAR BUTTONS -->
+                <!-- END SIDEBAR BUTTONS -->
+                <!-- SIDEBAR MENU -->
+                <div class="profile-usermenu">
+                    <ul class="nav">
+                        <li>
+                            <a ui-sref="dashboard.adminDashboard.listAllProductions" style="padding-left: 11px">
+                                <i class="fa fa-film fa-2x"></i>
+                                <span>Productions</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a ui-sref="dashboard.adminDashboard.userList" style="padding-left: 22px">
+                                <i class="fa fa-user fa-2x"></i>
+                                <span>Users</span>
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a ui-sref="dashboard.adminDashboard.messages">
+                                <i class="fa fa-envelope fa-2x"></i>
+                                <span>Messages</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- END MENU -->
+            </div>
+        </div>
+        <div class="col-md-9">
+            <div class="profile-content" ui-view>
+
+            </div>
+        </div>
+    </div>
+</div>
